@@ -21,6 +21,12 @@
     ],
     "main": "./extension",
     "contributes": {
+		"keybindings": [
+			{
+				"key": "Ctrl+Alt+C",
+				"command": "extension.copyFileName"
+            }
+        ],
         "commands": [
             {
                 "command": "extension.copyFileName",
@@ -30,13 +36,11 @@
         "menus": {
             "explorer/context": [
                 {
-                    "key": "ctrl+alt+c",
                     "command": "extension.copyFileName"
                 }
             ],
             "editor/title/context": [
                 {
-                    "key": "ctrl+alt+c",
                     "command": "extension.copyFileName"
                 }
             ]
