@@ -63,6 +63,7 @@
         "color": "#1c2237",
         "theme": "dark"
     },
+    "icon": "logo.png",
     "dependencies": {
         "clipboardy": "^1.2.3",
         "hoek": "^5.0.4",
