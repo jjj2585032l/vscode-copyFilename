@@ -21,12 +21,6 @@
     ],
     "main": "./extension",
     "contributes": {
-        "keybindings": [
-            {
-                "key": "Ctrl+Alt+C",
-                "command": "extension.copyFileName"
-            }
-        ],
         "commands": [
             {
                 "command": "extension.copyFileName",
@@ -44,7 +38,13 @@
                     "command": "extension.copyFileName"
                 }
             ]
-        }
+        },
+        "keybindings": [
+            {
+                "key": "Ctrl+Alt+C",
+                "command": "extension.copyFileName"
+            }
+        ]
     },
     "scripts": {},
     "devDependencies": {
