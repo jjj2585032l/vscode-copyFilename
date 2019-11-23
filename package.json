@@ -21,10 +21,10 @@
     ],
     "main": "./extension",
     "contributes": {
-		"keybindings": [
-			{
-				"key": "Ctrl+Alt+C",
-				"command": "extension.copyFileName"
+        "keybindings": [
+            {
+                "key": "Ctrl+Alt+C",
+                "command": "extension.copyFileName"
             }
         ],
         "commands": [
@@ -65,6 +65,7 @@
     },
     "dependencies": {
         "clipboardy": "^1.2.3",
-        "hoek": "^5.0.4"
+        "hoek": "^5.0.4",
+        "jshint": "^2.10.3"
     }
 }
