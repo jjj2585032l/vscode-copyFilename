@@ -10,7 +10,15 @@ exports.activate = context => {
 
     //Register command
     const copyFilename = vscode.commands.registerCommand('extension.copyFileName', (uri) => {
-
+		if (typeof uri === 'undefined') {
+			if (vscode.window.activeTextEditor) {
+				uri = vscode.window.activeTextEditor.document.uri;
+			}
+		}
+		if (!uri) {
+			vscode.window.showErrorMessage('Cannot copy relative path, as there appears no file is opened (or it is very large');
+			return;
+		}
         //get the relative url, parse it and take the last part
         let url = vscode.workspace.asRelativePath(uri);
         let urlFormatted = url.replace(/\\/g, '/')

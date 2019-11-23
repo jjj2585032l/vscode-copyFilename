@@ -1,10 +1,10 @@
 {
-    "name": "copy-filename",
-    "displayName": "Copy filename",
-    "description": "Simple VS Code plugin that allows you to copy file name or folder name to clipboard from sidebar or opened file label",
+    "name": "copyfilename",
+    "displayName": "Copy Filename",
+    "description": "Copy current editor filename",
     "license": "MIT",
     "version": "2.1.5",
-    "publisher": "jack89ita",
+    "publisher": "Kaboyi",
     "engines": {
         "vscode": "^1.19.0"
     },
@@ -12,11 +12,9 @@
         "Other"
     ],
     "keywords": [
-        "sidebar",
         "copy-filename",
         "clipboard",
-        "file",
-        "folder"
+        "file"
     ],
     "activationEvents": [
         "onCommand:extension.copyFileName"
@@ -32,19 +30,19 @@
         "menus": {
             "explorer/context": [
                 {
+                    "key": "ctrl+alt+c",
                     "command": "extension.copyFileName"
                 }
             ],
             "editor/title/context": [
                 {
+                    "key": "ctrl+alt+c",
                     "command": "extension.copyFileName"
                 }
             ]
         }
     },
     "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
         "@types/mocha": "^2.2.48",
@@ -56,13 +54,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Jack89ita/vscode-copy-filename"
+        "url": "https://github.com/jjj2585032l/vscode-copyFilename"
     },
     "galleryBanner": {
         "color": "#1c2237",
         "theme": "dark"
     },
-    "icon": "img/cf_logo.png",
     "dependencies": {
         "clipboardy": "^1.2.3",
         "hoek": "^5.0.4"
